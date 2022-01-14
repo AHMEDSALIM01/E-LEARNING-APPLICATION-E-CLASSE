@@ -9,7 +9,9 @@
 
 body{
     background: linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
+    height: 100vh;
 }
+
 
 form{
     transform: translateY(25%);
