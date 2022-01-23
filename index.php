@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="CSS/my-bootstrap.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicons.png">
     <title>E-LEARNING</title>
     
 

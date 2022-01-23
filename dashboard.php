@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="CSS/my-bootstrap.css">
     <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicons.png">
     <title>Dashboard</title>
 </head>
 <body>
