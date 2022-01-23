@@ -19,7 +19,6 @@
 
 .side{
     background: #FAFFC1;
-    justify-content: space-between;
 }
 
 .card1{
@@ -48,7 +47,26 @@ small{
 
 ul{
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+ul li a{
+    display: inline-block;
+    transition: 0.5 ease;
+}
+
+ul li a span{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+ul li .active1{
+    background-color: #0dcaf0;
+    transition: 0.5 ease;
+}
+
+ul li :hover{
+    background-color: #0dcaf0;
 }
 
 .user{
@@ -69,4 +87,15 @@ h5{
 
 .b_mark{
     color:#EE95C5;
+}
+
+@media screen and (min-width: 575px) {
+    
+    .Sbar{
+        height: 100vh;
+    }
+    
+    .btn1{
+        width:100%;
+    }
 }
