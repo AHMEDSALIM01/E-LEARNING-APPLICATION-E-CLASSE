@@ -51,15 +51,15 @@
                                 <tbody class="bh">
                                 <?php include 'tableaux/StListe.php' ?>
                                 <?php foreach ($students as $student){
-                                        echo "<tr class='trr bg-white tr1'>
-                                                <td class='d-none d-sm-block'><img src={$student['img']} class='rounded-circle' alt='' /></td>
-                                                <td>{$student['name']}</td>
-                                                <td class='d-none d-sm-table-cell'>{$student['mail']}</td>
-                                                <td class='d-none d-sm-table-cell'>{$student['phone']}</td>
-                                                <td>{$student['enumber']}</td>
-                                                <td class='d-none d-sm-table-cell'>{$student['date']}</td>
-                                                <td><i class='fal fa-pen fs-6 text-info' style='cursor: pointer;'></i></td>
-                                                <td><i class='fal fa-trash fs-6 text-info' style='cursor: pointer;'></i></td>
+                                        echo "<tr class='trr'>
+                                                <td class='d-none d-sm-block bg-white'><img src={$student['img']} class='rounded-circle' alt='' /></td>
+                                                <td class='bg-white'>{$student['name']}</td>
+                                                <td class='d-none d-sm-table-cell bg-white'>{$student['mail']}</td>
+                                                <td class='d-none d-sm-table-cell bg-white'>{$student['phone']}</td>
+                                                <td class='bg-white'>{$student['enumber']}</td>
+                                                <td class='d-none d-sm-table-cell bg-white'>{$student['date']}</td>
+                                                <td class='bg-white'><i class='fal fa-pen fs-6 text-info' style='cursor: pointer;'></i></td>
+                                                <td class='bg-white'><i class='fal fa-trash fs-6 text-info' style='cursor: pointer;'></i></td>
                                             </tr>";
                                         };
                                    ?>
