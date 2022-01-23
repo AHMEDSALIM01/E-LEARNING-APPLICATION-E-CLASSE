@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.search{
+    position: absolute;
+    right: 10px;
+}
+
+.admin-name{
+    font-size: 14px;
+}
+
+.side{
+    background: #FAFFC1;
+    justify-content: space-between;
+}
+
+
+
+small{
+    font-size: 18px;
+}
+
+ul{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+ul li a{
+    display: inline-block;
+    transition: 0.5 ease;
+}
+
+ul li a span{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+ul li .active2{
+    background-color: #0dcaf0;
+    transition: 0.5 ease;
+}
+
+ul li :hover{
+    background-color: #0dcaf0;
+}
+
+.table{
+    border-collapse:separate;
+    border-spacing:0 15px;
+}
+
+.add{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.bh{
+    font-size: 10px;
+}
+
+.trt{
+    color: #ACACAC;
+    font-weight: 600;
+}
+
+.trr{
+    padding: 0 30px;
+    font-weight: 500;
+}
+
+
+@media screen and (min-width: 575px) {
+    
+    .Sbar{
+        height: 100vh;
+    }
+    .btn1{
+        width:100%;
+    }
+
+    tbody tr td:first-child{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
+    tbody tr td:last-child{
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }  
+}
+
+
