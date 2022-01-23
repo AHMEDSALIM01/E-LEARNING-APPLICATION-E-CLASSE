@@ -19,7 +19,6 @@
 
 .side{
     background: #FAFFC1;
-    justify-content: space-between;
 }
 
 
@@ -30,7 +29,26 @@ small{
 
 ul{
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+ul li a{
+    display: inline-block;
+    transition: 0.5 ease;
+}
+
+ul li a span{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+ul li .active3{
+    background-color: #0dcaf0;
+    transition: 0.5 ease;
+}
+
+ul li :hover{
+    background-color: #0dcaf0;
 }
 
 .add{
@@ -53,7 +71,16 @@ ul{
     font-weight: 500;
 }
 
-
+@media screen and (min-width: 575px) {
+    
+    .Sbar{
+        height: 100vh;
+    }
+    
+    .btn1{
+        width:100%;
+    }
+}
 
 
 

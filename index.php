@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/my-bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/my-bootstrap.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>E-LEARNING</title>
     
 
@@ -14,10 +14,10 @@
 <body>
     <main>
 
-        <section class="container-fluid">
-            <section class="row justify-content-center">
-                <section class="col-12 col-sm-6 col-md-4 ">
-                    <form action="https://ahmedsalim01.github.io/E-LEARNING-APPLICATION-V1.0-E-Classe/dashboard.html" class="bg-white py-3 px-3 ">
+        <section class="container-fluid vh-100">
+            <section class="row justify-content-center align-items-center h-100">
+                <section class="col-10 col-sm-8 col-md-6 col-lg-4  ">
+                    <form action="dashboard.php" class="bg-white py-3 px-3" methode="GET">
                         <div class="m-4 ">
                              <a href="#" class="navbar-brand text-dark   border-start border-3 border-info px-2 mx-3"> E-classe</a>
                         </div>
