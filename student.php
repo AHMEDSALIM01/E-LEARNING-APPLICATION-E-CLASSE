@@ -50,7 +50,9 @@
                                 </thead>
 
                                 <tbody class="bh">
-                                <?php include 'tableaux/StListe.php' ?>
+                                <?php $file='js/students.json'?>
+                                <?php $data=file_get_contents($file)?>
+                                <?php $students=json_decode($data,true)?>
                                 <?php foreach ($students as $student){
                                         echo "<tr class='trr'>
                                                 <td class='d-none d-sm-block bg-white'><img src={$student['img']} class='rounded-circle' alt='' /></td>
