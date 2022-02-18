@@ -36,11 +36,11 @@
                                 <thead class="bh">
                                 <tr class="trt text-capitalize ">
                                     <th scope="col">name</th>
-                                    <th scope="col" class="d-none d-sm-table-cell" >payment schedule</th>
-                                    <th scope="col" >bill number</th>
+                                    <th scope="col">payment schedule</th>
+                                    <th scope="col">bill number</th>
                                     <th scope="col">amount paid</th>
-                                    <th scope="col" >balance amount</th>
-                                    <th scope="col" class="d-none d-sm-table-cell">date</th>
+                                    <th scope="col">balance amount</th>
+                                    <th scope="col">date</th>
                                     <td ></td>
                                 </tr>
                                 </thead>
@@ -56,12 +56,12 @@
                                     ?>
                                 
                                    <tr class='trr'>
-                                        <td ><?php echo $payment['name'] ?></td>
-                                        <td class='d-none d-sm-table-cell' ><?php echo $payment['payment_schedule'] ?></td>
-                                        <td ><?php echo $payment['bill_number'] ?></td>
+                                        <td><?php echo $payment['name'] ?></td>
+                                        <td><?php echo $payment['payment_schedule'] ?></td>
+                                        <td><?php echo $payment['bill_number'] ?></td>
                                         <td><?php echo $payment['amount_paid'] ?></td>
-                                        <td ><?php echo $payment['balance_amount'] ?></td>
-                                        <td class='d-none d-sm-table-cell'><?php echo $payment['date_operation'] ?></td>
+                                        <td><?php echo $payment['balance_amount'] ?></td>
+                                        <td><?php echo $payment['date_operation'] ?></td>
                                         <td><i class='fal fa-eye text-info' style='cursor: pointer;'></i></td>
                                     </tr> 
 

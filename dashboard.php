@@ -6,6 +6,9 @@
     $course=mysqli_fetch_column($course);
     $amount=mysqli_query($connect,"SELECT SUM(amount_paid) FROM payment_details");
     $amount=mysqli_fetch_column($amount);
+    $users=mysqli_query($connect,"SELECT COUNT(id) FROM users ");
+    $users=mysqli_fetch_column($users);
+    
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +76,7 @@
                                         <i class="fs-1 fal fa-user mb-4 text-white"></i> 
                                         <h5 class="card-title  mb-3 text-white">Users</h5>
                                     </div>
-                                  <p class="card-text text-end  fw-bolder">3</p>
+                                  <p class="card-text text-end  fw-bolder"><?php echo $users?></p>
 
                                 </div>
                               </div>

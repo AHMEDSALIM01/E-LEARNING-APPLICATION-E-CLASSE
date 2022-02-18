@@ -1,3 +1,16 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['name']) || !isset($_SESSION['email'])){
+        header('location:index.php');
+    }
+    else{
+        if(time() - $_SESSION['last_login_timestamp'] > 60*60*24){
+            header('location:logout.php');
+        }
+
+    }
+?>
+
 <div class="side col-12 col-sm-4 col-md-3 col-xl-2 px-sm-2 px-0  d-flex sticky-top">
     <div class=" d-flex flex-sm-column flex-row flex-grow-1  flex-nowrap px-3 pt-2 text-white justify-content-center align-items-center">
         <a href="dashboard.php" class="d-none d-sm-inline pb-sm-3 mb-md-1 me-md-auto text-black align-self-start text-decoration-none">
@@ -6,8 +19,8 @@
                         
         <div class="d-flex flex-column align-items-center justify-content-center mb-sm-3 ">
             <div class="d-none d-sm-flex flex-row-reverse flex-sm-column align-items-center mb-3">
-                <img src="https://picsum.photos/60.jpg" alt=""  class="rounded-circle mb-sm-3">
-                <span class="admin-name text-dark me-2 me-sm-0 fw-bolder">Admin name</span>
+                <img src="./image/<?php echo $_SESSION["avatar"]?>" alt=""  class="rounded-circle mb-sm-3" style="width:60px; height:60px;">
+                <span class="admin-name text-dark me-2 me-sm-0 fw-bolder"><?php echo $_SESSION['name']?></span>
             </div>
             <span class="text-info d-none d-sm-inline user">Admin</span>
         </div>
@@ -42,7 +55,7 @@
             </li>
 
             <li class="nav-item align-self-md-center w-100">
-                <a href="index.php" class="btn btn1 mt-sm-3 text-dark">
+                <a href="logout.php" class="btn btn1 mt-sm-3 text-dark">
                     <span class="ms-sm-2 me-3 d-none d-sm-inline">Logout</span><i class="fal fa-sign-out-alt fs-5 "></i></a>
             </li>
         </ul>

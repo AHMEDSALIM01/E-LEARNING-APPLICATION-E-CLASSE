@@ -31,7 +31,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <label>Email</label>
-                    <input name="email"  class="form-control">
+                    <input name="email" type="email" class="form-control" require>
                 </div>
                 <div class="form-group mb-3">
                     <label>Phone</label>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <label>Enroll Number</label>
-                    <input name="enroll_number" class="form-control ">
+                    <input name="enroll_number"  class="form-control ">
                 </div>
                 <div class="form-group mb-3">
                     <label>Date Of Admission</label>
