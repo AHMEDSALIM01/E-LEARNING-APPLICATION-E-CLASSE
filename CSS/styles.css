@@ -21,8 +21,6 @@
     background: #FAFFC1;
 }
 
-
-
 small{
     font-size: 18px;
 }
@@ -42,14 +40,6 @@ ul li a span{
     font-weight: 600;
 }
 
-ul li .active3{
-    background-color: #0dcaf0;
-    transition: 0.5 ease;
-}
-
-ul li :hover{
-    background-color: #0dcaf0;
-}
 
 .add{
     font-size: 14px;
@@ -71,6 +61,65 @@ ul li :hover{
     font-weight: 500;
 }
 
+.card1{
+    background: #F0F9FF;
+    border-radius: 8px;
+}
+
+.card2{
+    background: #FEF6FB;
+    border-radius: 8px;
+}
+
+.card3{
+    background: #FEFBEC;
+    border-radius: 8px;
+}
+
+.card4{
+    background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+    border-radius: 8px;
+}
+
+small{
+    font-size: 18px;
+}
+
+ul{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+ul li a{
+    display: inline-block;
+    transition: 0.5 ease;
+}
+
+ul li a span{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.user{
+    font-weight: 500;
+}
+
+.card-text{
+    font-size: 23px;
+}
+
+h5{
+    font-size: 15px;
+}
+
+.cap{
+    color:#74C1ED;
+}
+
+.b_mark{
+    color:#EE95C5;
+}
+
 @media screen and (min-width: 575px) {
     
     .Sbar{
@@ -81,8 +130,3 @@ ul li :hover{
         width:100%;
     }
 }
-
-
-
-
-

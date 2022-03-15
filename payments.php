@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="CSS/my-bootstrap.css">
     <link rel="stylesheet" href="CSS/payments.css">
+    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="shortcut icon" type="image/png" href="img/favicons.png">
     <title>Payments</title>
 </head>
@@ -35,32 +36,40 @@
                                 <thead class="bh">
                                 <tr class="trt text-capitalize ">
                                     <th scope="col">name</th>
-                                    <th scope="col" class="d-none d-sm-table-cell" >payment schedule</th>
-                                    <th scope="col" >bill number</th>
+                                    <th scope="col">payment schedule</th>
+                                    <th scope="col">bill number</th>
                                     <th scope="col">amount paid</th>
-                                    <th scope="col" >balance amount</th>
-                                    <th scope="col" class="d-none d-sm-table-cell">date</th>
+                                    <th scope="col">balance amount</th>
+                                    <th scope="col">date</th>
                                     <td ></td>
                                 </tr>
                                 </thead>
 
                                 <tbody class="bh">
-                                <?php include 'tableaux/dPayments.php' ?>
-                                <?php
-                                foreach($payments as $payment){
-                                echo"
+                                    <?php 
+                                        include_once 'db.php';
+                                        $result=mysqli_query($connect,"SELECT * FROM  payment_details");
+                                    ?>
+                                    <?php 
+                                        $i=0;
+                                        while($payment=mysqli_fetch_array($result)){
+                                    ?>
+                                
                                    <tr class='trr'>
-                                        <td >{$payment['name']}</td>
-                                        <td class='d-none d-sm-table-cell' >{$payment['paySchedule']}</td>
-                                        <td >{$payment['bnumber']}</td>
-                                        <td>{$payment['amountPaid']}</td>
-                                        <td >{$payment['balanceAmount']}</td>
-                                        <td class='d-none d-sm-table-cell'>{$payment['date']}</td>
+                                        <td><?php echo $payment['name'] ?></td>
+                                        <td><?php echo $payment['payment_schedule'] ?></td>
+                                        <td><?php echo $payment['bill_number'] ?></td>
+                                        <td><?php echo $payment['amount_paid'] ?></td>
+                                        <td><?php echo $payment['balance_amount'] ?></td>
+                                        <td><?php echo $payment['date_operation'] ?></td>
                                         <td><i class='fal fa-eye text-info' style='cursor: pointer;'></i></td>
                                     </tr> 
-                                    ";
-                                };
-                                ?>
+
+                                    <?php
+                                        $i++;
+                                        }
+                                    ?>
+
                                 </tbody>
                             </table>
                             </div>
@@ -71,17 +80,5 @@
         </div>
 
     <script src="js/my-bootstrap.js"></script>
-    <script>
-        var btnContainer = document.getElementById("menu");
-        var btns = btnContainer.getElementsByClassName("btn");
-
-        for(var i=0; i<btns.length; i++){
-            btns[i].addEventListener('click', function(){
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active");
-                this.className += "active";
-            })
-        }
-    </script>
 </body>
 </html>

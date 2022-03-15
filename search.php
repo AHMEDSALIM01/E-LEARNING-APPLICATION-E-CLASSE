@@ -44,12 +44,12 @@
 
                                     <thead class="bh bg-light sticky-top">
                                     <tr class="trt text-capitalize ">
-                                        <td ></td>
+                                        <td class="d-none d-sm-block"></td>
                                         <th scope="col">name</th>
-                                        <th scope="col" >email</th>
-                                        <th scope="col" >phone</th>
+                                        <th scope="col" class="d-none d-sm-table-cell">email</th>
+                                        <th scope="col" class="d-none d-sm-table-cell">phone</th>
                                         <th scope="col">enroll number</th>
-                                        <th scope="col" >date of addmision</th>
+                                        <th scope="col" class="d-none d-sm-table-cell">date of addmision</th>
                                         <td ></td>
                                         <td ></td>
                                     </tr>
@@ -58,8 +58,15 @@
                                     <tbody class="bh">
                                         
                                             <?php 
+                                                error_reporting(0);
                                                 include_once 'db.php';
-                                                $result=mysqli_query($connect,"SELECT * from students");
+                                                if(count($_POST)>0){
+                                                    $name=$_POST['student'];
+                                                    $result=mysqli_query($connect,"SELECT * from students WHERE name='$name'");
+                                                }  
+                                                else{
+                                                    echo "<h3 class='text-center text-secondary fw-bold text-uppercase py-3'>Student NOT found<h3>";
+                                                }
                                             ?>
                                             <?php 
                                                 $i=0;
@@ -68,11 +75,11 @@
                                                 <tr class='trr'>
                                                     <td class='bg-white'><img src="./image/<?php echo $Students["avatar"]?>" class='rounded-circle' style='height:60px; width:60px;' </td>
                                                     <td class='bg-white'><?php echo $Students["name"]?></td>
-                                                    <td class='bg-white'><?php echo $Students["email"]?></td>
-                                                    <td class='bg-white'><?php echo $Students["phone"]?></td>
+                                                    <td class='d-none d-sm-table-cell bg-white'><?php echo $Students["email"]?></td>
+                                                    <td class='d-none d-sm-table-cell bg-white'><?php echo $Students["phone"]?></td>
                                                     <td class='bg-white'><?php echo $Students["enroll_number"]?></td>
-                                                    <td class='bg-white'><?php echo $Students["date_of_admission"]?></td>
-                                                    <td class='bg-white'><a class='text-decoration-none' href="update_process.php?id=<?php echo ($Students["id"]); ?>"><i class='fal fa-pen fs-6 text-info' style='cursor: pointer;'></i></a></td>
+                                                    <td class='d-none d-sm-table-cell bg-white'><?php echo $Students["date_of_admission"]?></td>
+                                                    <td class='bg-white'><a class='text-decoration-none' href="update_process.php?id=<?php echo $Students["id"]; ?>"><i class='fal fa-pen fs-6 text-info' style='cursor: pointer;'></i></a></td>
                                                     <td class='bg-white'><a href="delete_process.php?id=<?php echo $Students["id"]; ?>"><i class='fal fa-trash fs-6 text-info' style='cursor: pointer;'></i></td>
                                                 </tr>     
                                             <?php

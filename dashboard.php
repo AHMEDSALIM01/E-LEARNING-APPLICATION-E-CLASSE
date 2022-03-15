@@ -1,3 +1,16 @@
+<?php
+    include_once 'db.php';
+    $student=mysqli_query($connect,"SELECT COUNT(id) FROM students ");
+    $student=mysqli_fetch_column($student);
+    $course=mysqli_query($connect,"SELECT COUNT(id) FROM courses ");
+    $course=mysqli_fetch_column($course);
+    $amount=mysqli_query($connect,"SELECT SUM(amount_paid) FROM payment_details");
+    $amount=mysqli_fetch_column($amount);
+    $users=mysqli_query($connect,"SELECT COUNT(id) FROM users ");
+    $users=mysqli_fetch_column($users);
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +21,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="CSS/my-bootstrap.css">
     <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    
     <link rel="shortcut icon" type="image/png" href="img/favicons.png">
     <title>Dashboard</title>
 </head>
@@ -25,7 +40,7 @@
                                         <i class="cap fs-1 fal fa-graduation-cap mb-4"></i> 
                                         <h5 class="card-title fs-6 mb-3 text-highlight">Students</h5>
                                     </div>
-                                  <p class="card-text text-end fw-bolder">243</p>
+                                  <p class="card-text text-end fw-bolder"><?php echo $student?></p>
 
                                 </div>
                               </div>
@@ -37,7 +52,7 @@
                                         <i class="b_mark fs-1 fal fa-bookmark mb-4"></i> 
                                         <h5 class="card-title  mb-3 text-highlight">Course</h5>
                                     </div>
-                                  <p class="card-text text-end  fw-bolder">13</p>
+                                  <p class="card-text text-end  fw-bolder"><?php echo $course?></p>
 
                                 </div>
                               </div>
@@ -49,7 +64,7 @@
                                         <i class="fs-1 fal fa-usd-square mb-4 text-info"></i>
                                         <h5 class="card-title  mb-3 text-highlight">Payments</h5>
                                     </div>
-                                  <p class="card-text text-end  fw-bolder"><small class="">DHS</small> 556,00</p>
+                                  <p class="card-text text-end  fw-bolder"><small class="">DHS</small> <?php echo $amount?>,00</p>
 
                                 </div>
                               </div>
@@ -61,7 +76,7 @@
                                         <i class="fs-1 fal fa-user mb-4 text-white"></i> 
                                         <h5 class="card-title  mb-3 text-white">Users</h5>
                                     </div>
-                                  <p class="card-text text-end  fw-bolder">3</p>
+                                  <p class="card-text text-end  fw-bolder"><?php echo $users?></p>
 
                                 </div>
                               </div>

@@ -1,0 +1,28 @@
+ul li .active2{
+    background-color: #0dcaf0;
+    transition: 0.5 ease;
+}
+
+ul li :hover{
+    background-color: #0dcaf0;
+}
+
+.table{
+    border-collapse:separate;
+    border-spacing:0 15px;
+}
+
+@media screen and (min-width: 575px) {
+
+    tbody tr td:first-child{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
+    tbody tr td:last-child{
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }  
+}
+
+
