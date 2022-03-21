@@ -120,8 +120,58 @@ h5{
     color:#EE95C5;
 }
 
-@media screen and (min-width: 575px) {
+.newstudent,.updatestudent,.confirmation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(2, 2, 2, 0.493);
+    position: fixed;
+    z-index: 1030;
+}
+
+.addform{
+    z-index: 1060;
+}
+
+.toasconfirm{
+    z-index: 1060;
+    background-color: white;
+    height: 170px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btnconfirm{
+    margin-top: 50px;
+}
+
+.exclamation{
+    display: none;
+}
+
+.check{
+    display: none;
+}
+
+.msg{
+    color: red;
+    font-size: 10px;
+    font-weight: 600;
     
+}
+
+.upload{
+    border: dashed 3px #0dcaf0;
+}
+
+
+.upload:hover{
+    
+    background-color: #0dcaf0;
+}
+
+@media screen and (min-width: 575px) {
     .Sbar{
         height: 100vh;
     }

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
+    height: 100vh;
+}
+
+
+form{
+    border-radius: 20px;
+}
+
+.navbar-brand{
+    font-size: 20px;
+    border-left: 6px;
+    font-weight: 700;
+}
+
+.test{
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 15px;
+}
+
+label{
+    font-size: 12px;
+}
+
+input.form-control{
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.inv {
+    color: red;
+    border: 2px solid red;
+} 
+
+.validName{
+    border: 2px solid rgb(0, 153, 255);
+}
+
+.validEmail{
+    border: 2px solid rgb(0, 153, 255);
+}
+
+.validPassword{
+    border: 2px solid rgb(0, 153, 255);
+}
+
+.validCPassword{
+    border: 2px solid rgb(0, 153, 255);
+}
+
+.msg{
+    color: red;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.exclamation{
+    color: red;
+    position: absolute;
+    top: 33px;
+    right: 10px;
+    display: none;
+}
+
+.check{
+    color: rgb(0, 153, 255);
+    position: absolute;
+    top: 33px;
+    right: 10px;
+    display: none;
+}
+
+.btn{
+    font-size: 12px;
+    font-weight: 400; 
+}
+
+.forgot{
+    font-size: 10px; 
+    font-weight: 500; 
+}
+
+.notification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.514);
+    z-index: 1020;
+}
+
+.confirmation{
+    border-radius: 10px;
+    padding: 30px 15px 15px 15px;
+    text-align: center;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1020;
+    display: block;
+}
+
+.par{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#close{
+    position: fixed;
+    top:215px;
+    right: 483px;
+}
+

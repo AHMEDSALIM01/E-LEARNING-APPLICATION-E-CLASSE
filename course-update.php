@@ -1,24 +1,33 @@
 <?php
     include_once 'db.php';
-    if($_GET["id"]){
-    $update = mysqli_query($connect,"SELECT * FROM courses WHERE id='" . $_GET['id']. "'");
-    $course=mysqli_fetch_array($update);
-    if(count($_POST) > 0) {
+    session_start();
+    if(!isset($_SESSION['name']) || !isset($_SESSION['email'])){
+        header('location:index.php');
+    }
+    else{
+        
+        if($_GET["id"]){
+            $update = mysqli_query($connect,"SELECT * FROM courses WHERE id='" . $_GET['id']. "'");
+            $course=mysqli_fetch_array($update);
+            if(count($_POST) > 0) {
+        
+                $imagename=$_FILES['logo']['name'];
+                    if($imagename){
+                        unlink('./image/'.$course['logo']);
+                        move_uploaded_file($_FILES['logo']['tmp_name'],'./image/'.$imagename);
+                    }else{
+                        $imagename=$course['logo'];
+                    }
+                    mysqli_query($connect,"UPDATE courses set logo='" . $imagename . "', title='" . $_POST['title'] . "', lien='" . $_POST['lien']  . "' WHERE id='" . $_POST['id'] . "'");
+                    if(isset($_POST['save'])){
+                        header('location:courses.php');
+                    }
+            }
+            }
+            mysqli_close($connect);
 
-        $imagename=$_FILES['logo']['name'];
-            if($imagename){
-                unlink('./image/'.$course['logo']);
-                move_uploaded_file($_FILES['logo']['tmp_name'],'./image/'.$imagename);
-            }else{
-                $imagename=$course['logo'];
-            }
-            mysqli_query($connect,"UPDATE courses set logo='" . $imagename . "', title='" . $_POST['title'] . "', lien='" . $_POST['lien']  . "' WHERE id='" . $_POST['id'] . "'");
-            if(isset($_POST['save'])){
-                header('location:courses.php');
-            }
     }
-    }
-    mysqli_close($connect);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">

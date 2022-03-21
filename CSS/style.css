@@ -37,8 +37,10 @@ label{
 }
 
 .form-control{
-    font-size: 8px;
+    font-size: 12px;
 }
+
+
 
 .btn{
     font-size: 12px;
@@ -49,3 +51,5 @@ label{
     font-size: 10px; 
     font-weight: 500; 
 }
+
+

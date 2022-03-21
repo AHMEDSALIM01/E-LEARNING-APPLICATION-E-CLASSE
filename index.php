@@ -119,7 +119,7 @@
                         <?php }?>
                         <div class="mb-2">
                             <label for="Email" class="form-label text-secondary fw-bolder">User Name</label>
-                            <input type="text" class="form-control fw-bolder" id="Email"  name="email" value="<?php echo $em?>" placeholder="Enter your email or your user name">
+                            <input type="text" class="form-control " id="Email"  name="email" value="<?php echo $em?>" placeholder="Enter your email or your user name">
                         </div>
                         <?php if(!empty($nameErr)){?>
                         <span class="error text-warning fs-6"><svg class="bi flex-shrink-0 me-2" width="18" height="18" role="img" aria-label="danger:"><use xlink:href="#exclamation-triangle-fill"/></svg><?php echo $nameErr;?></span>
@@ -130,9 +130,9 @@
                         <?php }?>
                         <div class="mb-2 position-relative ">
                             <label for="Password" class="form-label text-secondary fw-bolder">Password</label>
-                            <input type="password" class="form-control fw-bolder " id="Password" name="password" value="<?php echo $pass?>" placeholder="Enter your password" >
+                            <input type="password" class="form-control" id="Password" name="password" value="<?php echo $pass?>" placeholder="Enter your password" >
                             <input type="checkbox" class="visually-hidden" id="showpassword" onclick="show()">
-                            <label for="showpassword" style="position:absolute; top:62%; right:2%"><i class='fal fa-eye'></i></label>
+                            <label for="showpassword" style="position:absolute; top: 36px;; right:10px"><i class='fal fa-eye'></i></label>
                         </div>
                         <?php if(!empty($passErr)){?>
                         <span class="error text-warning fs-6"><svg class="bi flex-shrink-0 me-2" width="18" height="18" role="img" aria-label="danger:"><use xlink:href="#exclamation-triangle-fill"/></svg><?php echo $passErr;?></span>
@@ -144,7 +144,8 @@
                             <input class="form-check-input" type="checkbox" id="check" value="1" name="check" >
                             <label class="form-check-label text-secondary fw-bolder" for="check" >Remember Me</label>
                         </div>
-                        <input type="submit" class="btn btn-info w-100 text-white mb-4" name="submit" value="SIGN IN"></input>
+                        <input type="submit" class="btn btn-info w-100 text-white mb-3" name="submit" value="SIGN IN"></input>
+                        <p class="forgot text-center mb-2">You don't have an account yet? <a href="sign-up.php" class="text-info">Sign Up</a></p>
                         <p class="forgot text-center ">Forgot your password? <a href="#" class="text-info">Reset Password</a></p>
                       </form>
                 </section>    

@@ -12,6 +12,7 @@ ul li :hover{
     border-spacing:0 15px;
 }
 
+
 @media screen and (min-width: 575px) {
 
     tbody tr td:first-child{
